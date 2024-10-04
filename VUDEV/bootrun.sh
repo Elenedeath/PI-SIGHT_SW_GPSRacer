@@ -9,3 +9,8 @@ sudo rfkill block wifi
 
 #Bluetooth controller pairing function
 sudo python3.7 /boot/VUDEV/remote_pairing.py &
+
+sleep 10
+
+#Bluetooth agent NoInputNoOutput problem solver
+sudo bt-agent --capability=DisplayOnly -p /home/pi/pins &
