@@ -1,0 +1,79 @@
+// Copyright 2022 Google LLC
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+// sudo apt install python3-protobuf
+// Compile with protoc -I ./ --python_out ./ exit_speed.proto
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+// TODO(djhedges): Rename this package back to exit_speed after
+// gps.proto is removed.
+package exit_speed_refactor;
+
+message Gps {
+  google.protobuf.Timestamp time = 1;
+  double lat = 2;
+  double lon = 3;
+  double alt = 4;
+  double speed_ms = 5;  // meters/second
+}
+
+message Accelerometer {
+  google.protobuf.Timestamp time = 1;
+  double accelerometer_x = 2; // G forces.
+  double accelerometer_y = 3; // G forces.
+  double accelerometer_z = 4; // G forces.
+}
+
+message Gyroscope {
+  google.protobuf.Timestamp time = 1;
+  double gyro_x = 2; // Degrees/second
+  double gyro_y = 3; // Degrees/second
+  double gyro_z = 4; // Degrees/second
+}
+
+message Labjack {
+  google.protobuf.Timestamp time = 1;
+  double labjack_temp_f = 2;  // Labjack ambient temperature in Fahrenheit.
+  double battery_voltage = 3;
+  double front_brake_pressure_voltage = 4;
+  double fuel_level_voltage = 5;
+  double fuel_pressure_voltage = 6;
+  double oil_pressure_voltage = 7;
+  double oil_temp_voltage =  8;
+  double rear_brake_pressure_voltage = 9;
+  double water_temp_voltage = 10;
+}
+
+message WBO2 {
+  google.protobuf.Timestamp time = 1;
+  double afr = 2;  // Air fuel ratio.
+  double rpm = 3;
+  double tps_voltage = 4;  // Throttle position sensor voltage.
+}
+
+message TireIrSensors {
+  google.protobuf.Timestamp time = 1;
+  TireIrSensor lf_tire_temp = 2;  // Left Front
+  TireIrSensor rf_tire_temp = 3;  // Right Front
+  TireIrSensor lr_tire_temp = 4;  // Left Rear
+  TireIrSensor rr_tire_temp = 5;  // Right Rear
+}
+
+message TireIrSensor {
+  double inner = 1;
+  double middle = 2;
+  double outer = 3;
+}
