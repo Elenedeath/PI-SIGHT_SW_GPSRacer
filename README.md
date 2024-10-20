@@ -1,6 +1,6 @@
 # PI-SIGHT SW - GPS Racer
 
-'PI-SIGHT GPS Racer'는 라즈베리 파이를 랩타이머 또는 스마트폰 연동 블루투스 GPS 수신기로 사용할 수 있도록 하며, 랩타임 기록과 출력에 관련된 부분은 [Exit_Speed]([https://github.com/opencardev/crankshaft](https://github.com/djhedges/exit_speed)) 소프트웨어를 커스터마이징하여 만들어졌습니다.
+'GPS Racer'는 [PI-SIGHT](https://github.com/younsj97/PI-SIGHT_Helmet_HUD)를 랩타이머 또는 스마트폰 연동 블루투스 GPS 수신기로 사용할 수 있도록 하며, 랩타임 기록과 출력에 관련된 부분은 [Exit_Speed]([https://github.com/opencardev/crankshaft](https://github.com/djhedges/exit_speed)) 소프트웨어를 커스터마이징하여 만들어졌습니다.
 
 
 ## 기능
@@ -23,6 +23,7 @@
 
  - _GPS 신호 간섭으로 인해 후방카메라는 작동하지 않습니다._
  - _GPSRacer-16GB-yymmdd.img 펌웨어는 16GB microSD 메모리에 설치할 수 있습니다._
+ - _32GB 이상의 메모리 카드를 사용해 boot 파티션의 용량 늘리고 싶은 경우, 우선 16GB 펌웨어를 설치한 뒤, [GParted를 통해 boot 파티션 크기를 늘리세요.](https://learn.adafruit.com/resizing-raspberry-pi-boot-partition/edit-partitions)_
 
 
 ## 커스터마이징
