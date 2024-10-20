@@ -8,7 +8,7 @@
  - PI-SIGHT의 외장 GPS 모듈을 통해 10Hz GPS 데이터를 수신합니다.
  - 리시버 모드를 사용하면 PI-SIGHT는 스마트폰과 블루투스로 연결해 10Hz GPS 데이터를 전송하는 외장 GPS 모듈이 되며, RaceChrono 앱에서 외장 GPS 장치로 등록해 사용할 수 있습니다.
  - 랩타이머 모드를 사용하면 PI-SIGHT는 GPS 데이터를 자체적으로 사용해 가장 가까운 트랙을 자동으로 찾고, 랩타임 기록을 저장하며, 베스트 랩타임과 비교한 현재 시간 차이를 실시간으로 출력합니다.
- - 자세한 내용은 [설명서를 다운로드](https://github.com/younsj97/PI-SIGHT_SW_GPSRacer/blob/main/PI-SIGHT%20%EC%82%AC%EC%9A%A9%EC%84%A4%EB%AA%85%EC%84%9C-4%20(GPS%EB%A0%88%EC%9D%B4%EC%84%9C).pdf)하여 확인하세요
+ - 자세한 내용은 [VUDEV 홈페이지](https://sites.google.com/vudev.net/vudevnet/gpsracer-info) 또는 [설명서를 다운로드](https://github.com/younsj97/PI-SIGHT_SW_GPSRacer/blob/main/PI-SIGHT%20%EC%82%AC%EC%9A%A9%EC%84%A4%EB%AA%85%EC%84%9C-4%20(GPS%EB%A0%88%EC%9D%B4%EC%84%9C).pdf)하여 확인하세요
 
 
 ## 설치
