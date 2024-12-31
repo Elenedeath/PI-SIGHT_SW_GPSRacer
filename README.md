@@ -1,6 +1,6 @@
 # PI-SIGHT SW - GPS Racer
 
-'GPS Racer'는 [PI-SIGHT](https://github.com/younsj97/PI-SIGHT_Helmet_HUD)를 랩타이머 또는 스마트폰 연동 블루투스 GPS 수신기로 사용할 수 있도록 하며, 랩타임 측정과 기록에 관련된 부분은 [Exit_Speed]([https://github.com/opencardev/crankshaft](https://github.com/djhedges/exit_speed)) 소프트웨어를 활용해 만들어졌습니다.
+'GPS Racer'는 [PI-SIGHT](https://github.com/younsj97/PI-SIGHT_Helmet_HUD)를 랩타이머 또는 스마트폰 연동 블루투스 GPS 수신기로 사용할 수 있도록 하며, 랩타임 측정과 기록에 관련된 부분은 [Exit_Speed](https://github.com/djhedges/exit_speed) 소프트웨어를 활용해 만들어졌습니다.
 
 
 ## 기능
