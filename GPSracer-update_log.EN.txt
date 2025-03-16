@@ -1,0 +1,133 @@
+22.10.04
+Installing Bluetooth Related Systems
+Bluetooth pairing, connectable
+
+22.10.05
+Register bluetooth rfcomm wait in rc.local
+Data connection to smartphone via Bluetooth rfcomm profile
+
+22.10.07
+Install PIP3
+GPS module related system installation
+GPS data can be received via serial
+
+22.11.06
+python3 bluetooth installation
+sudo rfcomm listen hci0 & Remove to enable Python rfcomm
+
+22.11.25
+pi user auto login
+Added alpha version gui
+Change pairing code
+
+22.11.27
+Modify screen ratio in config.txt
+gui fix, tab focus implementation
+Register rc.local function
+
+23.03.31
+GPS time, BT pairing, receiver code, Exitspeed, GUI application
+
+23.04.04
+Install picamera library, change controller code, add startup.sh
+(Camera thread is inactive)
+
+23.04.06
+Rollback keymap interval 0.1 seconds
+
+23.04.09
+Enable camera thread, modify boot partition size, set led off
+
+23.04.14
+Change camera resolution/frame
+Install scrot
+Change capture file name
+Add Video Converter
+
+23.04.15
+Fixed an issue where data was not transmitted on the first connection when running receiver mode.
+When disconnecting from a smartphone, the socket is closed instead of reconnecting
+
+23.04.19
+Create L.Info, S.Info tabs
+Added ability to save each lap time
+
+23.05.24
+Change startup.sh to bootrun.sh
+Block wifi with rfkill in bootrun
+sudo systemctl disable triggerhappy.socket
+apt upgrade, install bluetooth controller, set up rfcomm parallel connection
+Fixed keymap remote control version, added pairing code
+Added remote control connection detection code, fixed by deleting devices excluded from BT_pair
+Added GUI remote control connection notification
+(I haven't tested the camera)
+
+23.05.26
+Fixed the issue where key mapping was not applied when re-pairing the remote control by changing to pynput
+I tried adding the Lost mode to the remote control, but the device search stops during pairing anyway, so Lost doesn't appear, so I rolled back.
+Fix intermittent problem of GUI being interrupted when sleeping by modifying bootrun order
+Camera test completed
+
+23.06.12
+Camera disabled due to camera and GPS interference
+Slightly changed UI configuration
+GUI timedelta +-, color change
+
+23.06.16
+sudo systemctl disable triggerhappy.service
+sudo systemctl disable triggerhappy
+Remove camera code from bootrun
+Delete video converter files
+Change GUI code lap time to 3 decimal places
+Added blinking when pressing the save button
+Added to SSH notebook boot
+
+23.06.20
+Shorten bootrun time
+Modify UI configuration
+Change GUI code save capture file name
+
+23.06.28
+Modify sensor.py to save to the boot area by modifying the .data file name and directory.
+Comment out the code to delete lap_logs in the GUI.py save button
+Changed gpsd start/stop wait time from 1 second to 0.5 seconds in exit_speed_main
+
+23.10.11
+Change remote control name to SIGHTER RC
+DISPLAY=:0 reset
+Apply newly created remote control key mapping
+Turn off continuous camera recording and apply only rear view (not tested yet to see if GPS is detected)
+
+23.10.20
+Change device name to PI-SIGHT
+Rear camera text, change car name in config yaml
+Test results show GPS interference when rear camera is turned on while driving
+
+23.11.01
+Change temperature limit to 60 degrees in config.txt
+Change camera resolution to 1296*860 to fill the video screen
+
+23.12.11
+Rebuilt after changing the base to Raspberry Pi OS buster desktop version to make the system lighter
+Remove .ui file border spring margin by applying full screen in GUI.py
+Change the minimum lap time to 60 seconds in exitspeed_main.py
+Change autorun code in rc.local to LXDE
+Remove the DISPLAY=:0 specification code
+
+23.12.12
+Add domestic tracks
+Removed screen off state variable, fixed it to turn off immediately
+
+23.12.13
+Add sudo to GUI.py execution in LXDE autostart
+Remove camera keymapping controller from bootrun.sh - Camera is not used due to GPS interference
+Change the Bluetooth device name to pi-sight
+
+23.12.14
+pyautogui screenshot not working in info tab capture, so modify GUI.py with pyscreenshot
+Deleted useless parts related to resolution in GUI.py
+It seems that GPS interference occurs even when the camera is activated, so disable the camera in raspi-config (Fix GPS time seems to be shorter)
+
+24.10.03
+When connecting a smartphone via Bluetooth, the agent NoInputNoOutput mode does not work, causing the confirmation window to appear continuously.
+Solved with a new way to find the Bluetooth item
